@@ -5,7 +5,7 @@ enum mnemonicCategory: String{
 }
 
 struct Mnemonic:Identifiable, Hashable{
-    let id = UUID()
+    var id : UUID
     var title: String
     var mnemonic: String
     var description: String

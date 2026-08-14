@@ -2,7 +2,7 @@ import SwiftUI
 
 @main
 struct MyApp: App {
-    @State private var model = MneumonicsModel()
+    @State private var model = MnemonicsModel()
     
     var body: some Scene {
         WindowGroup {

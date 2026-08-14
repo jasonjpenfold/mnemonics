@@ -1,9 +1,9 @@
 import SwiftUI
 
 struct MnemonicView: View{
-    var mneumonic: Mnemonic
+    var mnemonic: Mnemonic
     var body: some View{
-        Text(mneumonic.title)
+        Text(mnemonic.title)
         
     }
 }
