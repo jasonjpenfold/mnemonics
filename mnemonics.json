@@ -1,0 +1,72 @@
+[
+  {
+    "id": "A1B2C3D4-0001-0000-0000-000000000001",
+    "title": "Cranial Nerves (names)",
+    "mnemonic": "Oh Oh Oh To Touch And Feel Very Good Velvet, AH",
+    "description": "I–XII:\nOlfactory, Optic, Oculomotor, Trochlear, Trigeminal, Abducens, Facial, Vestibulocochlear, Glossopharyngeal, Vagus, Accessory, Hypoglossal",
+    "category": "Anatomy"
+  },
+  {
+    "id": "A1B2C3D4-0001-0000-0000-000000000002",
+    "title": "Cranial Nerves (function)",
+    "mnemonic": "Some Say Marry Money But My Brother Says Big Brains Matter More",
+    "description": "S, S, M, M, B, M, B, S, B, B, M, M",
+    "category": "Anatomy"
+  },
+  {
+    "id": "A1B2C3D4-0001-0000-0000-000000000003",
+    "title": "Causes of pancreatitis",
+    "mnemonic": "GET SMASHED",
+    "description": "Gallstones\nEthanol\nTrauma\nSteroids\nMumps\nAutoimmune\nScorpion sting\nHyperlipidaemia / Hypercalcaemia\nERCP\nDrugs",
+    "category": "Gastroenterology"
+  },
+  {
+    "id": "A1B2C3D4-0001-0000-0000-000000000004",
+    "title": "Hypocalcaemia signs",
+    "mnemonic": "CATS go numb",
+    "description": "Convulsions\nArrhythmias\nTetany\nSpasms/Stridor",
+    "category": "Biochemistry"
+  },
+  {
+    "id": "A1B2C3D4-0001-0000-0000-000000000005",
+    "title": "Stroke FAST signs",
+    "mnemonic": "FAST",
+    "description": "Face drooping\nArm weakness\nSpeech difficulty\nTime to call emergency services",
+    "category": "Neurology"
+  },
+  {
+    "id": "A1B2C3D4-0001-0000-0000-000000000006",
+    "title": "Causes of nephrotic syndrome",
+    "mnemonic": "CHAMPS",
+    "description": "Cirrhosis\nHeart failure\nAmyloidosis\nMultiple myeloma\nPost-infectious / Primary\nSLE",
+    "category": "Renal"
+  },
+  {
+    "id": "A1B2C3D4-0001-0000-0000-000000000007",
+    "title": "External carotid artery branches",
+    "mnemonic": "Some Anatomists Like Freaking Out Poor Medical Students",
+    "description": "Superior thyroid\nAscending pharyngeal\nLingual\nFacial\nOccipital\nPosterior auricular\nMaxillary\nSuperficial temporal",
+    "category": "Anatomy"
+  },
+  {
+    "id": "A1B2C3D4-0001-0000-0000-000000000008",
+    "title": "Features of nephritic syndrome",
+    "mnemonic": "PHAROH",
+    "description": "Protein (mild)\nHaematuria\nAzotaemia\nRBC casts\nOliguria\nHypertension",
+    "category": "Renal"
+  },
+  {
+    "id": "A1B2C3D4-0001-0000-0000-000000000009",
+    "title": "Horner’s syndrome",
+    "mnemonic": "PAM is HORNY",
+    "description": "Ptosis\nAnhidrosis\nMiosis",
+    "category": "Neurology"
+  },
+  {
+    "id": "A1B2C3D4-0001-0000-0000-000000000010",
+    "title": "Red flag cancer symptoms",
+    "mnemonic": "CAUTION",
+    "description": "Change in bowel/bladder\nA sore that doesn’t heal\nUnusual bleeding\nThickening/lump\nIndigestion/dysphagia\nObvious change in wart/mole\nNagging cough/hoarseness",
+    "category": "Oncology"
+  }
+]

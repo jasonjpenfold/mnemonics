@@ -5,7 +5,7 @@ struct ContentView: View {
     var body: some View {
         NavigationStack{
             List{
-                ForEach(model.mnemonicDatabase, id: \.id){mnemonic in 
+                ForEach(model.mnemonicDatabase){mnemonic in 
                     NavigationLink(value: mnemonic){MnemonicView(mnemonic: mnemonic)}
                 }
             }.navigationTitle("Mnemonics")

@@ -12,12 +12,12 @@ struct DetailView: View{
                     .font(.title)
                     .bold()
                 
-                Spacer()
+                
                 Text(mnemonic.mnemonic)
                     .padding(30)
                     .font(.headline)
                     .bold()
-                    .foregroundStyle(.black)
+                    .foregroundStyle(.primary)
                     .border(.blue.opacity(0.3),width: 2)
                 
                 

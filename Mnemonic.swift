@@ -1,13 +1,19 @@
 import SwiftUI
 
-enum mnemonicCategory: String{
+enum MnemonicCategory: String, Codable{
     case anatomy = "Anatomy"
+    case gastro = "Gastroenterology"
+    case neuro = "Neurology"
+    case renal = "Renal"
+    case oncology = "Oncology"
+    case biochem = "Biochemistry"
+    
 }
 
-struct Mnemonic:Identifiable, Hashable{
+struct Mnemonic:Identifiable, Hashable, Codable{
     var id : UUID
     var title: String
     var mnemonic: String
     var description: String
-    var category: mnemonicCategory
+    var category: MnemonicCategory
 }
