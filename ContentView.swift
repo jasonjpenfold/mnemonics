@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @Environment(MneumonicsModel.self) var model
+    @Environment(MneumonicsModel.self) private var model
     var body: some View {
         NavigationStack{
             List{

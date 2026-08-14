@@ -1,7 +1,3 @@
-// Mnemonics App
-// Jason Penfold 18/4/26
-// added to working copy
-
 import SwiftUI
 
 @main
