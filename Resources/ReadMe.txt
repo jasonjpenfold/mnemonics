@@ -65,6 +65,8 @@ ForEach(model.categories) { category in
 * cleaner view
 * scalable
 
+
+** changed
 ⸻
 
 2. Category lookup is O(n) every time
@@ -91,6 +93,7 @@ let category = model.categoryLookup[mnemonic.categoryID ?? UUID()]
 
 (or better—make categoryID non-optional 👇)
 
+** changed
 ⸻
 
 3. categoryID should not be optional
@@ -114,6 +117,8 @@ var categoryID: UUID
 
 Then delete your “Uncategorised” section entirely unless you truly need it.
 
+
+** changed
 ⸻
 
 4. Your model is doing too little (missed opportunity)
@@ -131,9 +136,19 @@ But this is where business logic should live, not in views.
 var sortedCategories: [MCategories] {
     categories.sorted { $0.name < $1.name }
 }
+
+** added
+
+
 func mnemonics(for category: MCategories) -> [Mnemonic] {
     mnemonicDatabase.filter { $0.categoryID == category.id }
 }
+
+** cant see it is needed as have :
+var mnemonicsByCategory: [UUID?: [Mnemonic]] {
+    Dictionary(grouping: mnemonicDatabase) { $0.categoryID }
+}
+
 
 👉 Your views become simpler and more declarative.
 

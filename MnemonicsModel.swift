@@ -1,29 +1,47 @@
 import SwiftUI
 
 @Observable
-class MnemonicsModel{
-    private(set) var mnemonicDatabase: [Mnemonic]
+class MnemonicsViewModel{
+    // private attributes
+    private(set) var mnemonicDatabase: [Mnemonic]{
+        didSet{ // used if mnemonicDatabase changes
+            mnemonicsByCategoryId = Dictionary(grouping: mnemonicDatabase){
+                $0.categoryID
+            }
+        }
+    }
     private(set) var categories: [MCategories] 
+    private(set) var mnemonicsByCategoryId: [UUID:[Mnemonic]]
+    
+    // public attributes
     var sortedCategories: [MCategories]{
         categories.sorted{$0.name < $1.name}
     }
-    var mnemonicsByCategoryId: [UUID:[Mnemonic]]{
+   /* var mnemonicsByCategoryId: [UUID:[Mnemonic]]{
         Dictionary(grouping: mnemonicDatabase)
         {$0.categoryID}
             
         }
-       // model.mnemonicDatabase.filter{$0.categoryID == category.id}
+    */
+       // instead of model.mnemonicDatabase.filter{$0.categoryID == category.id}
         var categoryNameFromId: [UUID:String]{
             Dictionary(uniqueKeysWithValues: categories.map{
                 ($0.id, $0.name)
             })
         }
-        //model.categories.first{$0.id == mnemonic.categoryID} 
+        // instead of model.categories.first{$0.id == mnemonic.categoryID} 
     
     init(){
-      
-        self.mnemonicDatabase = Bundle.main.decode("mnemonics.json")
-        self.categories = Bundle.main.decode("categories.json")
+        let mnemonics: [Mnemonic] = Bundle.main.decode("mnemonics.json")
+        // need to set Type so <T> can be inferred to decode func
+        self.mnemonicDatabase = mnemonics
+        let categories: [MCategories] = Bundle.main.decode("categories.json")
+        self.categories = categories
+        // needs local mnemonics and categories
+        self.mnemonicsByCategoryId = Dictionary(grouping: mnemonics){
+            $0.categoryID
+        }
     }
     
 }
+

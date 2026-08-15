@@ -1,13 +1,15 @@
 import SwiftUI
 
 struct ContentView: View {
-    @Environment(MnemonicsModel.self) private var model
+    @Environment(MnemonicsViewModel.self) private var model
     var body: some View {
         NavigationStack{
             List{
                 
                 ForEach(model.sortedCategories){
+                    
                     category in
+                    
                     if let mnemonics = model.mnemonicsByCategoryId[category.id]{
                         Section(category.name){
                             ForEach(mnemonics){

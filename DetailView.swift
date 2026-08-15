@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct DetailView: View{
-    @Environment(MnemonicsModel.self) private var model
+    @Environment(MnemonicsViewModel.self) private var model
     var mnemonic: Mnemonic
     
     var body: some View{
