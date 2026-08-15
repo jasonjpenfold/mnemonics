@@ -20,7 +20,7 @@ struct ContentView: View {
                     }
                 }
                 
-            }.navigationTitle("Mnemonics")
+            }.navigationTitle("Mnemonics List")
                 .navigationBarTitleDisplayMode(.large)
                 .navigationDestination(for: Mnemonic.self, destination: DetailView.init)
         }
