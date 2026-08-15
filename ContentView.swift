@@ -5,22 +5,15 @@ struct ContentView: View {
     var body: some View {
         NavigationStack{
             List{
-                let mnemonics = model.mnemonicDatabase.filter{$0.categoryID == nil}
-                if !mnemonics.isEmpty{
-                    Section("Uncategorised"){
-                        ForEach(mnemonics){
-                            mnemonic in
-                            NavigationLink(value: mnemonic){MnemonicView(mnemonic: mnemonic)}
-                        }
-                    }
-                                    }
-                ForEach(model.categories){
+                
+                ForEach(model.sortedCategories){
                     category in
-                    let mnemonics = model.mnemonicDatabase.filter{$0.categoryID == category.id}
-                    Section(category.name){
-                        ForEach(mnemonics){
-                            mnemonic in
-                            NavigationLink(value: mnemonic){MnemonicView(mnemonic: mnemonic)}
+                    if let mnemonics = model.mnemonicsByCategoryId[category.id]{
+                        Section(category.name){
+                            ForEach(mnemonics){
+                                mnemonic in
+                                NavigationLink(value: mnemonic){MnemonicView(mnemonic: mnemonic)}
+                            }
                         }
                     }
                 }

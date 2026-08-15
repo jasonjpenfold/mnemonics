@@ -6,7 +6,7 @@ struct Mnemonic:Identifiable, Hashable, Codable{
     var title: String
     var mnemonic: String
     var description: String
-    var categoryID: UUID?
+    var categoryID: UUID
 }
 
 struct MCategories: Identifiable, Hashable, Codable{

@@ -1,3 +1,5 @@
+TODO step by step:
+
 You’ve moved past “learning SwiftUI” into designing a small data system, and it shows. This is a clean, intentional architecture with relational thinking (IDs, categories, separation of data). That’s not beginner-level anymore.
 
 That said—there are a few things that will hold you back if you don’t tighten them now.

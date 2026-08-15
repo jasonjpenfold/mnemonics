@@ -29,11 +29,12 @@ struct DetailView: View{
                 
                 Divider()
                 HStack{
-                    let category = model.categories.first{$0.id == mnemonic.categoryID} 
-                    Text("Category: \(category?.name ?? "None")")
+                    if let category = model.categoryNameFromId[mnemonic.categoryID]{
+                    Text("Category: \(category)")
                         .padding(10)
                         .background(.blue.opacity(0.3))
                         .clipShape(RoundedRectangle(cornerSize: CGSize(width: 20, height: 20)))
+                }
                 }.padding(30)
             }.padding(30)
         }
