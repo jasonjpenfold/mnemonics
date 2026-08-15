@@ -18,7 +18,7 @@ let package = Package(
             targets: ["AppModule"],
             displayVersion: "1.0",
             bundleVersion: "1",
-            appIcon: .placeholder(icon: .boat),
+            appIcon: .placeholder(icon: .openBook),
             accentColor: .presetColor(.blue),
             supportedDeviceFamilies: [
                 .pad,

@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct DetailView: View{
-    
+    @Environment(MnemonicsModel.self) private var model
     var mnemonic: Mnemonic
     
     var body: some View{
@@ -29,10 +29,12 @@ struct DetailView: View{
                 
                 Divider()
                 HStack{
-                    Text("Category: \(mnemonic.category.rawValue)")
+                    let category = model.categories.first{$0.id == mnemonic.categoryID} 
+                    Text("Category: \(category?.name ?? "None")")
+                        .padding(10)
+                        .background(.blue.opacity(0.3))
+                        .clipShape(RoundedRectangle(cornerSize: CGSize(width: 20, height: 20)))
                 }.padding(30)
-                .background(.blue.opacity(0.3))
-                .clipShape(RoundedRectangle(cornerSize: CGSize(width: 10, height: 10)))
             }.padding(30)
         }
         
